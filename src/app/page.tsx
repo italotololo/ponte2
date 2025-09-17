@@ -14,7 +14,7 @@ export default function Home() {
         />
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <h2>
-            Bem vindo ao Ponfaes
+            Bem vindo! ao Ponfaes
           </h2>
          
         </ol>
