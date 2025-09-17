@@ -1,7 +1,8 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-export const authOptions = {
+// O objeto de configuração. Ele não precisa ser exportado.
+const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -10,6 +11,7 @@ export const authOptions = {
         password: { label: "Senha", type: "password" },
       },
       async authorize(credentials) {
+        // Lógica de autenticação com seu banco de dados
         if (credentials?.email === 'teste@exemplo.com' && credentials?.password === 'senha123') {
           return { id: "1", name: "Usuário Teste", email: "teste@exemplo.com" };
         }
@@ -23,7 +25,7 @@ export const authOptions = {
 };
 
 // Exporta o manipulador de rota diretamente.
-// Isso é o que a Vercel e o Next.js App Router esperam.
+// Isso é o que o Next.js App Router espera.
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
