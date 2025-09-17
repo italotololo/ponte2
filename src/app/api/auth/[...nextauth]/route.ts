@@ -11,7 +11,7 @@ const authOptions = {
         password: { label: "Senha", type: "password" },
       },
       async authorize(credentials) {
-        // Lógica de autenticação com seu banco de dados
+        // Lógica de autenticação com  banco de dados
         if (credentials?.email === 'teste@exemplo.com' && credentials?.password === 'senha123') {
           return { id: "1", name: "Usuário Teste", email: "teste@exemplo.com" };
         }

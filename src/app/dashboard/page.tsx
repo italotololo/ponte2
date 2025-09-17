@@ -23,7 +23,7 @@ export default function DashboardPage() {
   if (session) {
     return (
       <div>
-        <h1>Dashboard</h1>
+        <h1>Ponfaes</h1>
         <p>Bem-vindo, {session.user?.name || session.user?.email}!</p>
       </div>
     );
