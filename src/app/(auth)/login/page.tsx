@@ -29,51 +29,56 @@ export default function LoginPage() {
       setError(result?.error || 'Email ou senha inválidos.');
     }
   };
+  
 
   return (
     <div 
+    
       style={{
         display: 'flex', 
         justifyContent: 'center', 
         alignItems: 'center', 
         minHeight: '100vh',
         backgroundColor: '#f0f0f0', 
+        backgroundImage: `url('/login.jpeg')`, // Imagem de fundo
+        backgroundSize: 'cover', // Cobre toda a área
+        backgroundPosition: 'center', // Centraliza a imagem
       }}
     >
       <div 
+      
         style={{
-          // Dimensões do formulário e da imagem
-          width: '700px', // Mesma largura da sua imagem
-          height: '500px', // Mesma altura da sua imagem
-          
-          // Propriedades da imagem de fundo aplicadas diretamente no formulário
-          backgroundImage: `url('/fotologoponfaes.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat', 
+          // Dimensões do formulário 
+          width: '300px', // largura 
+          height: '300px', // altura
+         
 
           // Estilos da caixa de login
           padding: '40px',
-          borderRadius: '8px',
-          boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+          borderRadius: '10px',
+          backgroundColor: 'transparent', // Fundo transparente para mostrar a imagem
+          boxShadow: '0 4px 6px rgba(14, 1, 1, 0.97)',
           display: 'flex', // Permite que o conteúdo interno seja centralizado
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Login</h2>
+        <h1 style={{ textAlign: 'center', marginBottom: '20px', color: '#0c4b92ff' }}></h1>
+        <p style={{ color: '#0c4b92ff' }}></p>
+        <br />
+        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}></h2>
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column',gap: '15px',alignItems: 'center' }}>
           {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
       <div>
-  <label htmlFor="email" style={{ display: 'block', marginBottom: '5px', color: '#0f0702ec' }}>Email:</label>
+  <label htmlFor="email" style={{ display: 'block', marginBottom: '5px', color: '#1a0f04ff' }}>Email:</label>
   <input
     id="email"
     type="email"
     value={email}
     onChange={(e) => setEmail(e.target.value)}
     required
-    style={{ width: '150px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }} 
+    style={{ width: '250px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }} 
   />
 </div>
 <div>
@@ -84,7 +89,7 @@ export default function LoginPage() {
     value={password}
     onChange={(e) => setPassword(e.target.value)}
     required
-    style={{ width: '150px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
+    style={{ width: '250px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
   />
 </div>
           <button 
