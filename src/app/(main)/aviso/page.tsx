@@ -75,7 +75,7 @@ export default function AvisoPage() {
         
         {/* Título Principal */}
         <h1 className="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-indigo-200 pb-2">
-          CENTRAL DE AVISOS (PONFAES 2.0)
+          CENTRAL DE AVISOS
         </h1>
 
         {/* Mensagem de status (ex: número de avisos) */}

@@ -1,36 +1,108 @@
-/* src/components/Sidebar.module.css */
+/* Sidebar.module.css */
 
 .sidebar {
-  width: 250px;
+  width: 250px; /* Largura da sua sidebar */
   height: 100vh;
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 20px;
-  position: fixed;
-  top: 0;
+  background-color: #2c3e50; /* Cor de fundo da sua sidebar */
+  color: #ecf0f1; /* Cor do texto principal */
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Para fixar a sidebar */
   left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .menuList {
   list-style: none;
   padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Para fazer a lista ocupar o espaço disponível e empurrar o perfil para baixo */
 }
 
 .menuItem {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .menuLink {
-  text-decoration: none;
-  color: #ecf0f1;
   display: block;
-  padding: 10px;
+  padding: 12px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .menuLink:hover {
-  background-color: #34495e;
+  background-color: #34495e; /* Cor de hover para os itens do menu */
 }
+
+/* Estilos para o novo bloco de Perfil do Usuário */
+.userProfile {
+  padding: 20px;
+  border-top: 1px solid #34495e; /* Linha divisória */
+  background-color: #34495e; /* Fundo para o perfil */
+  text-align: center; /* Centraliza o conteúdo se preferir */
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-bottom: 10px;
+  gap: 10px; /* Espaçamento entre avatar e detalhes */
+}
+
+.avatarIcon {
+  width: 50px; /* Tamanho que você usava para a imagem */
+  height: 50px;
+  /* Cor do ícone - deve ser clara para aparecer no fundo escuro */
+  color: #5fa2dd; 
+  /* Adicione borda se desejar, mas não é estritamente necessário para um ícone */
+  border: 2px solid #5fa2dd;
+  border-radius: 50%; /* Mantém o formato circular do avatar */
+  padding: 5px; /* Espaço interno para o
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Alinha o texto à esquerda dos detalhes */
+}
+
+.userName {
+  font-weight: bold;
+  font-size: 0.95em;
+  color: #ecf0f1;
+}
+
+.userRole, .userSchool {
+  font-size: 0.8em;
+  color: #bdc3c7;
+}
+
+.logoutButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #e74c3c; /* Cor de botão de logout */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.logoutButton:hover {
+  background-color: #c0392b; /* Cor de hover para o botão de logout */
+}
+
+/* Certifique-se de que o conteúdo das suas páginas tenha um padding-left */
+/* igual à largura da sidebar para evitar sobreposição. Ex: */
+/* Adicione esta regra ao seu arquivo CSS global ou ao componente de layout principal */
+/* .content-area {
+  margin-left: 250px; // Se sua sidebar tiver 250px de largura
+  padding: 20px;
+} */
