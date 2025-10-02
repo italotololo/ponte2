@@ -50,14 +50,14 @@ export default function LoginPage() {
         style={{
           // Dimensões do formulário 
           width: '300px', // largura 
-          height: '300px', // altura
+          height: '250px', // altura
          
 
           // Estilos da caixa de login
           padding: '40px',
           borderRadius: '10px',
-          backgroundColor: 'transparent', // Fundo transparente para mostrar a imagem
-          boxShadow: '0 4px 6px rgba(14, 1, 1, 0.97)',
+          backgroundColor: 'white', // Fundo branco solido 
+          boxShadow: '0 4px 5px rgba(0, 0, 0, 0.2)',
           display: 'flex', // Permite que o conteúdo interno seja centralizado
           flexDirection: 'column',
           justifyContent: 'center',
@@ -99,7 +99,7 @@ export default function LoginPage() {
           </button>
         </form>
         <p style={{ textAlign: 'center', marginTop: '5px' }}>
-          * <Link href="/register">*</Link>
+           <Link href="/register">Esqueceu a senha?</Link>
         </p>
       </div>
     </div>

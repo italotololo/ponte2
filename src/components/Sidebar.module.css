@@ -99,6 +99,22 @@
   background-color: #c0392b; /* Cor de hover para o botão de logout */
 }
 
+/* Sidebar.module.css - NOVO ESTILO */
+
+/* Estilo para o Item de Menu Ativo (Destaca a página atual) */
+.menuItemActive {
+    /* Use a cor de fundo do hover, mas com uma borda para destaque */
+    background-color: #34495e; 
+    border-left: 5px solid #f39c12; /* Exemplo: Borda lateral amarela ou laranja */
+    padding-left: 15px; /* Ajusta o padding para compensar a borda */
+}
+
+/* Garante que o link dentro do item ativo também tenha a cor correta, se necessário */
+.menuItemActive .menuLink {
+    color: #f39c12; /* Cor mais viva para o texto do link ativo */
+    font-weight: bold;
+}
+
 /* Certifique-se de que o conteúdo das suas páginas tenha um padding-left */
 /* igual à largura da sidebar para evitar sobreposição. Ex: */
 /* Adicione esta regra ao seu arquivo CSS global ou ao componente de layout principal */
