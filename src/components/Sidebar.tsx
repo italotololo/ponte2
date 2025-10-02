@@ -1,43 +1,47 @@
 'use client';
 
 import Link from 'next/link';
-import { signOut, useSession } from 'next-auth/react'; // Importamos signOut e useSession
+import { signOut, useSession } from 'next-auth/react';
 import styles from './Sidebar.module.css'; 
-import { usePathname } from 'next/navigation'; // Adicionamos para destacar o link ativo
+import { usePathname } from 'next/navigation';
 
 // Dados simulados do usuário logado (MANTIDOS)
 const currentUser = {
-    nomeCompleto: 'Maria Eduarda Silva',
+    nomeCompleto: 'Maria Eduarda Silva', // <-- Vamos usar este nome
     turma: ' - 7º Ano B ',
     escola: 'E.E. Vila Dirce II',
 };
 
-// Ícone SVG de Usuário Simples
-const UserIcon = () => (
-    <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        className={styles.avatarIcon} // Use uma classe para estilizar o tamanho e cor no CSS
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round"
-    >
-        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-        <circle cx="12" cy="7" r="4"></circle>
-    </svg>
-);
+// ... (Restante dos componentes UserIcon, etc.)
 
+// Simple UserIcon component (replace with your own SVG or image if needed)
+function UserIcon() {
+    return (
+        <span
+            style={{
+                display: 'inline-block',
+                width: 40,
+                height: 40,
+                borderRadius: '50%',
+                background: '#eee',
+                textAlign: 'center',
+                lineHeight: '40px',
+                fontSize: 20,
+                color: '#888',
+                marginRight: 12,
+            }}
+            aria-label="User Icon"
+        >
+            👤
+        </span>
+    );
+}
 
 export default function Sidebar() {
-    // Usamos useSession para obter dados da sessão (opcional, mas bom para consistência)
     const { data: session } = useSession(); 
-    const pathname = usePathname(); // Hook para verificar a rota atual
+    const pathname = usePathname();
 
-    // Função que será executada ao clicar em Sair
     const handleLogout = async () => {
-        // Encerra a sessão e redireciona para a página /login
         await signOut({
             redirect: true,
             callbackUrl: '/login',
@@ -45,7 +49,6 @@ export default function Sidebar() {
     };
 
     const menuItems = [
-        // Adicionamos o Dashboard
         { name: 'Dashboard', href: '/dashboard' }, 
         { name: 'Aviso', href: '/aviso' },
         { name: 'Boletim', href: '/boletim' },
@@ -54,8 +57,9 @@ export default function Sidebar() {
         { name: 'Agenda', href: '/agenda' },
     ];
     
-    // Tentativa de usar os dados da sessão, se existirem (ideal para um projeto real)
-    const nomeExibido = session?.user?.name || currentUser.nomeCompleto;
+    // APENAS ESTA LINHA FOI ALTERADA:
+    // Priorizamos o nome de Maria Eduarda (currentUser.nomeCompleto)
+    const nomeExibido = currentUser.nomeCompleto || session?.user?.name || 'Usuário';
 
 
     return (
@@ -65,14 +69,14 @@ export default function Sidebar() {
             <h2 style={{ textAlign: 'center', marginBottom: '15px', color: '#fff' }}>Menu Principal</h2>
             
             {/* 2. Perfil do Usuário Logado */}
-            <div className={styles.userProfileTop}>
-                <div className={styles.userInfoTop}>
+            <div className={styles.userProfileTop}> {/* Você pode simplificar para styles.userProfile */}
+                <div className={styles.userInfoTop}>    {/* Você pode simplificar para styles.userInfo */}
                     
                     <UserIcon /> 
                     
                     {/* Informações */}
                     <div className={styles.userDetailsTop}>
-                        <span className={styles.userNameTop}>{nomeExibido}</span>
+                        <span className={styles.userNameTop}>{nomeExibido}</span> {/* Agora exibe Maria Eduarda Silva */}
                         <span className={styles.userRoleTop}>{currentUser.turma}</span>
                         <span className={styles.userSchoolTop}>{currentUser.escola}</span>
                     </div>
@@ -84,7 +88,6 @@ export default function Sidebar() {
                 {menuItems.map((item) => (
                     <li 
                         key={item.name} 
-                        // Adicionamos a classe 'active' se o caminho for o atual
                         className={`${styles.menuItem} ${pathname === item.href ? styles.menuItemActive : ''}`}
                     >
                         <Link href={item.href} className={styles.menuLink}>
@@ -98,7 +101,6 @@ export default function Sidebar() {
             <div className={styles.logoutContainer}>
                 <button 
                     className={styles.logoutButton}
-                    // Adicionamos o evento onClick com a função de logout
                     onClick={handleLogout} 
                 >
                     Sair
