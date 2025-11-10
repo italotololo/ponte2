@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 
 // Dados simulados do mês e eventos
-const MES_ATUAL = 'Maio';
+const MES_ATUAL = 'Novembro';
 const ANO_ATUAL = 2025;
-const DIA_INICIO_MES = 4; // 1º de Maio cai em uma Quinta-feira (Índice 4, considerando Domingo=0)
+const DIA_INICIO_MES = 6; // 1º de Novembro cai em um Sábado (Índice 6, considerando Domingo=0)
 const DIAS_DO_MES = 31;
 const DIAS_DA_SEMANA = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 
@@ -14,7 +14,7 @@ const eventosDoMes: Evento[] = [
   { dia: 5, nome: 'Prazo: Trabalho de História', tipo: 'prazo', cor: 'red' },
   { dia: 7, nome: 'Prova de Matemática', tipo: 'prova', cor: 'indigo' },
   { dia: 15, nome: 'Reunião de Pais e Mestres', tipo: 'reuniao', cor: 'green' },
-  { dia: 20, nome: 'Prova de Ciências', tipo: 'prova', cor: 'indigo' },
+  { dia: 28, nome: 'SARESP', tipo: 'prova', cor: 'indigo' },
   { dia: 26, nome: 'Início do 3º Bimestre', tipo: 'aviso', cor: 'blue' },
   { dia: 31, nome: 'Entrega Final do Portfólio', tipo: 'prazo', cor: 'red' },
 ];
@@ -84,7 +84,7 @@ export default function AgendaPage() {
   }
 
   // Simular o dia atual (Apenas para visualização no protótipo)
-  const diaAtual = 15; 
+  const diaAtual = 11; 
   
   return (
     <div className="min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">

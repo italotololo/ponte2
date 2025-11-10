@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 // Dados simulados do usuário logado (MANTIDOS)
 const currentUser = {
     nomeCompleto: 'Maria Eduarda Silva', // <-- Vamos usar este nome
-    turma: ' - 7º Ano B ',
+    turma: ' - 5º Ano B ',
     escola: 'E.E. Vila Dirce II',
 };
 

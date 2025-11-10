@@ -31,7 +31,7 @@ type Post = {
 const currentUser = {
   nome: 'Maria Eduarda Silva',
   tipo: 'aluno' as TipoUsuario, // Cast para TipoUsuario
-  avatarUrl: '/avatars/aluno.png', 
+  avatarUrl: '/avatar.png', 
 };
 
 const initialPosts: Post[] = [
@@ -45,7 +45,7 @@ const initialPosts: Post[] = [
     titulo: 'Dúvidas sobre a Lista de Exercícios de Geometria',
     conteudo: 'Pessoal, estou à disposição para tirar dúvidas sobre a lista de exercícios de Geometria...',
     data: '15/05/2025 às 10:30',
-    avatarUrl: '/avatars/professor.png',
+    avatarUrl: '/avatar.png',
     comentarios: [
       {
         id: 101,
@@ -53,7 +53,7 @@ const initialPosts: Post[] = [
         tipoAutor: 'aluno',
         conteudo: 'Professora, qual a diferença entre área e perímetro de um círculo?',
         data: '15/05/2025 às 11:00',
-        avatarUrl: '/avatars/aluno.png',
+        avatarUrl: '/avatar.png',
       },
       // ...
     ],
@@ -65,7 +65,7 @@ const initialPosts: Post[] = [
     titulo: 'Sugestão de Livro para o Clube de Leitura',
     conteudo: 'Olá a todos! Queria sugerir o livro "O Pequeno Príncipe"...',
     data: '14/05/2025 às 14:00',
-    avatarUrl: '/avatars/aluno.png',
+    avatarUrl: '/avatar.png',
     comentarios: [
       // ...
     ],

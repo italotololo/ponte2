@@ -6,16 +6,16 @@ import { useEffect } from 'react';
 
 // Dados Simulados (em um projeto real, viriam de uma API ou contexto)
 const dadosAluno = {
-  turma: '7º Ano B',
-  mediaGeral: 8.5,
-  faltasTotais: 3,
-  proximaAvaliacao: 'Prova de Ciências (20/05)',
+  turma: '5º Ano B',
+  mediaGeral: 9,
+  faltasTotais: 5,
+  proximaAvaliacao: 'SARESP (18/11)',
 };
 
 const avisosRecentes = [
-  { id: 1, titulo: 'Reunião de Pais e Mestres', data: '15/05', cor: 'bg-green-500' },
-  { id: 2, titulo: 'Aviso sobre Uniforme', data: '10/05', cor: 'bg-yellow-500' },
-  { id: 3, titulo: 'Prazo: Trabalho de História', data: '05/05', cor: 'bg-red-500' },
+  { id: 1, titulo: 'Reunião de Pais e Mestres', data: '28/11', cor: 'bg-green-500' },
+  { id: 2, titulo: 'Prova do SARESP', data: '18/11', cor: 'bg-yellow-500' },
+  { id: 3, titulo: 'Passeio ao zoológico', data: '12/11', cor: 'bg-red-500' },
 ];
 
 // -----------------------------------------------------------------

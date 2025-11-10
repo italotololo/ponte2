@@ -4,27 +4,27 @@ import React from 'react';
 const avisos = [
   {
     id: 1,
-    titulo: 'REUNIÃO GERAL DE PAIS E MESTRES',
-    data: '15/05/2025',
+    titulo: 'SARESP',
+    data: '07/11/2025',
     urgente: true,
-    conteudo: 'A Reunião Geral do 2º Bimestre será realizada na próxima sexta-feira, dia 15/05, às 19h00, no Auditório da Escola. Contamos com a presença de todos para discutir o desempenho acadêmico e as melhorias na plataforma PONFAES.',
+    conteudo: 'Atenção, alunos do 2º ano!Vamos erguer o Saresp! A prova será no dia 18/11. Fiquem atentos aos detalhes divulgados pela coordenação.',
     autor: 'Direção Escolar',
   },
   {
     id: 2,
-    titulo: 'Alteração no Horário de Educação Física',
-    data: '12/05/2025',
+    titulo: 'REUNIÃO GERAL DE PAIS E MESTRES',
+    data: '10/11/2025',
     urgente: false,
-    conteudo: 'Devido a um evento interno, as aulas de Educação Física da próxima terça-feira (13/05) foram remanejadas para o período da manhã. Pedimos que os alunos venham com o uniforme adequado.',
-    autor: 'Coordenação Pedagógica',
+    conteudo: 'A Reunião Geral do 4º Bimestre será realizada no dia 28/11, às 10h00, no Auditório da Escola. Contamos com a presença de todos para discutir o desempenho final dos alunos.',
+    autor: 'Coordenação Escolar',
   },
   {
     id: 3,
-    titulo: 'Encerramento do 1º Bimestre',
-    data: '05/05/2025',
+    titulo: 'PASSEIO AO ZOOLÓGICO',
+    data: '05/11/2025',
     urgente: false,
-    conteudo: 'Lembramos a todos que o 1º Bimestre será encerrado nesta semana. As notas finais estarão disponíveis na plataforma a partir do dia 10/05.',
-    autor: 'Secretaria',
+    conteudo: 'Lembramos a todos que dia 12/11 será nosso passeio ao zoológico.',
+    autor: 'Direção Escolar',
   },
 ];
 

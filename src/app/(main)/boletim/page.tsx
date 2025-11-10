@@ -3,43 +3,43 @@ import React from 'react';
 // Dados simulados de notas do aluno
 const aluno = {
   nome: 'Maria Eduarda Silva',
-  turma: '7º Ano B',
-  ra: '123456789',
-  periodo: '2º Bimestre / 2025',
+  turma: '5º Ano B',
+  ra: '115220303-X',
+  periodo: '4º Bimestre / 2025',
 };
 
 const boletim = [
   {
     disciplina: 'Português',
-    notas: [7.5, 8.0, 7.0],
-    media: 7.5,
+    notas: [8 , 8 , 8],
+    media: 8,
     status: 'Aprovado',
     faltas: 2,
   },
   {
     disciplina: 'Matemática',
-    notas: [6.0, 6.5, 7.0],
-    media: 6.5,
-    status: 'Aprovado',
-    faltas: 3,
-  },
-  {
-    disciplina: 'História',
-    notas: [9.0, 8.5, 9.5],
-    media: 9.0,
+    notas: [7 , 7 , 7],
+    media: 7,
     status: 'Aprovado',
     faltas: 0,
   },
   {
+    disciplina: 'História',
+    notas: [10 , 10 , 10],
+    media: 10,
+    status: 'Aprovado',
+    faltas: 1,
+  },
+  {
     disciplina: 'Ciências',
-    notas: [5.0, 6.0, 5.5],
-    media: 5.5,
-    status: 'Recuperação', // Exemplo de status
-    faltas: 4,
+    notas: [10 , 10 , 10],
+    media: 10,
+    status: 'Aprovado', // Exemplo de status
+    faltas: 1,
   },
   {
     disciplina: 'Geografia',
-    notas: [7.0, 7.0, 7.0],
+    notas: [7, 7, 7],
     media: 7.0,
     status: 'Aprovado',
     faltas: 1,
@@ -110,7 +110,7 @@ export default function BoletimPage() {
                   Disciplina
                 </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Notas (P1, P2, P3)
+                  Notas (1 Bim, 2 Bim, 3 Bim)
                 </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Média
@@ -155,7 +155,7 @@ export default function BoletimPage() {
 
         {/* Observações ou Legendas (Opcional) */}
         <div className="mt-8 text-gray-600 text-sm">
-          <p><span className="font-semibold">Observações:</span> A média para aprovação é 6.0.</p>
+          <p><span className="font-semibold">Observações:</span> A média para aprovação é 5.0.</p>
           <p>Para mais detalhes sobre as notas, entre em contato com a secretaria.</p>
         </div>
 
