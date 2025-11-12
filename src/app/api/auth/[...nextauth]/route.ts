@@ -12,7 +12,7 @@ const authOptions = {
       },
       async authorize(credentials) {
         // Lógica de autenticação com seu banco de dados
-        if (credentials?.email === 'teste@exemplo.com' && credentials?.password === 'senha123') {
+        if (credentials?.email === 'teste@exemplo.com' && credentials?.password === 'Senh@ponfaes') {
           return { id: "1", name: "Usuário Teste", email: "teste@exemplo.com" };
         }
 return null;
