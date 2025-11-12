@@ -1,5 +1,4 @@
-'use client'; 
-
+'use client';
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -15,11 +14,17 @@ export default function LoginPage() {
     e.preventDefault();
     setError('');
 
+    // debug: valores recebidos (remover em produção)
+    console.debug('Attempt login with:', { email, password });
+
     const result = await signIn('credentials', {
       redirect: false,
       email,
       password,
     });
+
+    // debug: resultado do signIn
+    console.debug('signIn result:', result);
 
     if (result?.ok) {
       console.log('Login bem-sucedido!');
@@ -29,36 +34,29 @@ export default function LoginPage() {
       setError(result?.error || 'Email ou senha inválidos.');
     }
   };
-  
 
   return (
-    <div 
-    
+    <div
       style={{
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         minHeight: '100vh',
-        backgroundColor: '#f0f0f0', 
-        backgroundImage: `url('/login.jpeg')`, // Imagem de fundo
-        backgroundSize: 'cover', // Cobre toda a área
-        backgroundPosition: 'center', // Centraliza a imagem
+        backgroundColor: '#f0f0f0',
+        backgroundImage: `url('/login.jpeg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      <div 
-      
+      <div
         style={{
-          // Dimensões do formulário 
-          width: '300px', // largura 
-          height: '250px', // altura
-         
-
-          // Estilos da caixa de login
+          width: '300px',
+          height: '250px',
           padding: '40px',
           borderRadius: '10px',
-          backgroundColor: 'white', // Fundo branco solido 
+          backgroundColor: 'white',
           boxShadow: '0 4px 5px rgba(0, 0, 0, 0.2)',
-          display: 'flex', // Permite que o conteúdo interno seja centralizado
+          display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
@@ -68,38 +66,59 @@ export default function LoginPage() {
         <p style={{ color: '#0c4b92ff' }}></p>
         <br />
         <h2 style={{ textAlign: 'center', marginBottom: '20px' }}></h2>
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column',gap: '15px',alignItems: 'center' }}>
+
+        <form
+          onSubmit={handleSubmit}
+          style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}
+        >
           {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
-      <div>
-  <label htmlFor="email" style={{ display: 'block', marginBottom: '5px', color: '#1a0f04ff' }}>Email:</label>
-  <input
-    id="email"
-    type="email"
-    value={email}
-    onChange={(e) => setEmail(e.target.value)}
-    required
-    style={{ width: '250px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }} 
-  />
-</div>
-<div>
-  <label htmlFor="password" style={{ display: 'block', marginBottom: '5px', color: '#0f0404ff' }}>Senha:</label>
-  <input
-    id="password"
-    type="password"
-    value={password}
-    onChange={(e) => setPassword(e.target.value)}
-    required
-    style={{ width: '250px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
-  />
-</div>
-          <button 
-            type="submit" 
-            style={{ padding: '12px', borderRadius: '4px', border: 'none', backgroundColor: '#0c4b92ff', color: '#fff', cursor: 'pointer', fontWeight: 'bold' }}>
+
+          <div>
+            <label htmlFor="email" style={{ display: 'block', marginBottom: '5px', color: '#1a0f04ff' }}>
+              Email:
+            </label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              style={{ width: '250px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="password" style={{ display: 'block', marginBottom: '5px', color: '#0f0404ff' }}>
+              Senha:
+            </label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              style={{ width: '250px', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
+            />
+          </div>
+
+          <button
+            type="submit"
+            style={{
+              padding: '12px',
+              borderRadius: '4px',
+              border: 'none',
+              backgroundColor: '#0c4b92ff',
+              color: '#fff',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
             Entrar
           </button>
         </form>
+
         <p style={{ textAlign: 'center', marginTop: '5px' }}>
-           <Link href="/register">Esqueceu a senha?</Link>
+          <Link href="/register">Esqueceu a senha?</Link>
         </p>
       </div>
     </div>
