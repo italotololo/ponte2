@@ -119,7 +119,7 @@ export default function BoletimPage() {
                   Status
                 </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Faltas
+                  
                 </th>
               </tr>
             </thead>
@@ -144,9 +144,7 @@ export default function BoletimPage() {
                       {item.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
-                    {item.faltas}
-                  </td>
+                  
                 </tr>
               ))}
             </tbody>

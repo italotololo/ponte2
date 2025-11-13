@@ -4,38 +4,38 @@ import React from 'react';
 const aluno = {
   nome: 'Maria Eduarda Silva',
   turma: '7º Ano B',
-  periodo: '2º Bimestre / 2025',
+  periodo: '3º Bimestre / 2025',
 };
 
 // Dados simulados de frequência por disciplina
 const frequencia = [
   {
     disciplina: 'Português',
-    aulasDadas: 30,
+    aulasDadas: 20,
     faltas: 2,
-    percentualPresenca: 93.3, // (28/30) * 100
+    percentualPresenca: 90.0 // (18/20) * 100
   },
   {
     disciplina: 'Matemática',
-    aulasDadas: 30,
+    aulasDadas: 20,
     faltas: 3,
-    percentualPresenca: 90.0,
+    percentualPresenca: 85.0,
   },
   {
     disciplina: 'História',
-    aulasDadas: 20,
+    aulasDadas: 10,
     faltas: 0,
     percentualPresenca: 100.0,
   },
   {
     disciplina: 'Ciências',
-    aulasDadas: 25,
-    faltas: 8, // Exemplo de falta alta
-    percentualPresenca: 68.0, 
+    aulasDadas: 10,
+    faltas: 0, // Exemplo de falta alta
+    percentualPresenca: 100.0, 
   },
   {
     disciplina: 'Geografia',
-    aulasDadas: 25,
+    aulasDadas: 8,
     faltas: 1,
     percentualPresenca: 96.0,
   },

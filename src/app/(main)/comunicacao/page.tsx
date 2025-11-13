@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 // 1. DADOS E TIPAGEM
 // -----------------------------------------------------------------
 
-type TipoUsuario = 'aluno' | 'professor';
+type TipoUsuario = 'aluno' | 'professor' | 'responsavel';
 
 type Comentario = {
   id: number;
@@ -40,19 +40,19 @@ const initialPosts: Post[] = [
   // ...
   {
     id: 1,
-    autor: 'Prof. Ana Paula (Matemática)',
+    autor: 'Prof. Ana Paula ',
     tipoAutor: 'professor',
-    titulo: 'Dúvidas sobre a Lista de Exercícios de Geometria',
-    conteudo: 'Pessoal, estou à disposição para tirar dúvidas sobre a lista de exercícios de Geometria...',
-    data: '15/05/2025 às 10:30',
+    titulo: 'Exercícios de matemática',
+    conteudo: 'Pessoal, estou à disposição para tirar dúvidas nos exercícios de matemática.',
+    data: '03/11/2025 às 10:30',
     avatarUrl: '/avatar.png',
     comentarios: [
       {
         id: 101,
-        autor: 'João Pedro (Aluno)',
+        autor: 'Pedro Henrique ',
         tipoAutor: 'aluno',
-        conteudo: 'Professora, qual a diferença entre área e perímetro de um círculo?',
-        data: '15/05/2025 às 11:00',
+        conteudo: 'Pro, poderia me ajudar com a questão 5 da página 42? estou com dificuldades para entender.',
+        data: '03/11/2025 às 11:15',
         avatarUrl: '/avatar.png',
       },
       // ...
@@ -60,11 +60,31 @@ const initialPosts: Post[] = [
   },
   {
     id: 2,
-    autor: 'Maria Eduarda Silva (Aluno)',
+    autor: 'Gabrielle Nunes',
     tipoAutor: 'aluno',
-    titulo: 'Sugestão de Livro para o Clube de Leitura',
-    conteudo: 'Olá a todos! Queria sugerir o livro "O Pequeno Príncipe"...',
-    data: '14/05/2025 às 14:00',
+    titulo: 'Uniforme para doação',
+    conteudo: 'Tenho um uniforme da escola para doar quem quiser me procura na entrada!"...',
+    data: '01/11/2025 às 17:00',
+    avatarUrl: '/avatar.png',
+    comentarios: [
+      {
+        id: 101,
+        autor: 'Mariana Souza ',
+        tipoAutor: 'aluno',
+        conteudo: 'qual o tamanho ???',
+        data: '03/11/2025 às 11:15',
+        avatarUrl: '/avatar.png',
+      },
+      // ...
+    ],
+  },
+  {
+    id: 3,
+    autor: 'Daniela  ',
+    tipoAutor: 'responsavel',
+    titulo: 'O Henzo está de atestado',
+    conteudo: 'Professora, o Henzo pegou 7 dias de atestado, amanhã levo o atestado na escola.',
+    data: '05/11/2025 às 10:45',
     avatarUrl: '/avatar.png',
     comentarios: [
       // ...
@@ -78,7 +98,8 @@ const initialPosts: Post[] = [
 
 const badgeClasses: Record<TipoUsuario, string> = {
   aluno: 'bg-blue-100 text-blue-800',
-  professor: 'bg-indigo-100 text-indigo-800',
+  professor: 'bg-red-100 text-red-800',
+  responsavel: 'bg-green-100 text-green-800',
 };
 
 const UserBadge: React.FC<{ tipo: TipoUsuario | string }> = ({ tipo }) => {
