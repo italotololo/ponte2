@@ -249,7 +249,7 @@ export default function ComunicacaoPage() {
         
         {/* Título Principal */}
         <h1 className="text-3xl font-bold text-gray-800 mb-8 border-b-2 border-indigo-200 pb-2">
-          MURAL DE COMUNICAÇÃO
+          MURAL DE COMUNICAÇÃO 5º X
         </h1>
 
         {/* Formulário para Nova Postagem */}
