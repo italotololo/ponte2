@@ -2,10 +2,10 @@ import React from 'react';
 
 // Dados simulados de notas do aluno
 const aluno = {
-  nome: 'Maria Eduarda Silva',
-  turma: '5º Ano B',
-  ra: '115220303-X',
-  periodo: '4º Bimestre / 2025',
+  nome: 'Renata Hyuga Kishimoto',
+  turma: '5º Ano X',
+  ra: '85220303-XY',
+  periodo: '3º Bimestre / 2025',
 };
 
 const boletim = [

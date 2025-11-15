@@ -6,9 +6,9 @@ import { useEffect } from 'react';
 
 // Dados Simulados (em um projeto real, viriam de uma API ou contexto)
 const dadosAluno = {
-  turma: '5º Ano B',
-  mediaGeral: 9,
-  faltasTotais: 5,
+  turma: '5º Ano X',
+  mediaGeral: 8.4,
+  faltasTotais: 6,
   proximaAvaliacao: 'SARESP (18/11)',
 };
 
@@ -95,7 +95,7 @@ export default function DashboardPage() {
             PONFAES 2.0
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Bem-vindo(a), <span className="text-indigo-600 font-semibold">Maria Eduarda</span>. Aqui está o resumo de hoje!
+            Bem-vindo(a), <span className="text-indigo-600 font-semibold">Renata</span>. Aqui está o resumo de hoje!
           </p>
           
           {/* 3. Cards de Resumo Rápido (Visão Geral) */}
@@ -174,7 +174,7 @@ export default function DashboardPage() {
                 <div className="bg-white p-4 rounded-xl shadow-md border border-gray-200">
                     <p className="text-xs font-semibold text-gray-700 mb-1">Dica da Agenda:</p>
                     <p className="text-sm text-gray-600">
-                        Não se esqueça da Reunião de Pais e Mestres no dia 15/05!
+                        Não se esqueça da Reunião de Pais e Mestres no dia 28/11!
                     </p>
                 </div>
             </div>

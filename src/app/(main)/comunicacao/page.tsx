@@ -29,9 +29,9 @@ type Post = {
 };
 
 const currentUser = {
-  nome: 'Maria Eduarda Silva',
+  nome: 'Renata Hyuga Kishimoto',
   tipo: 'aluno' as TipoUsuario, // Cast para TipoUsuario
-  avatarUrl: '/avatar.png', 
+  avatarUrl: '/renata2.jpg', 
 };
 
 const initialPosts: Post[] = [
@@ -40,52 +40,52 @@ const initialPosts: Post[] = [
   // ...
   {
     id: 1,
-    autor: 'Prof. Ana Paula ',
+    autor: 'Prof. Wagner Lima',
     tipoAutor: 'professor',
     titulo: 'Exercícios de matemática',
     conteudo: 'Pessoal, estou à disposição para tirar dúvidas nos exercícios de matemática.',
     data: '03/11/2025 às 10:30',
-    avatarUrl: '/avatar.png',
+    avatarUrl: '/wagner.jpg',
     comentarios: [
       {
         id: 101,
-        autor: 'Pedro Henrique ',
+        autor: 'Jessica Alves',
         tipoAutor: 'aluno',
         conteudo: 'Pro, poderia me ajudar com a questão 5 da página 42? estou com dificuldades para entender.',
         data: '03/11/2025 às 11:15',
-        avatarUrl: '/avatar.png',
+        avatarUrl: '/jessica.jpg',
       },
       // ...
     ],
   },
   {
     id: 2,
-    autor: 'Gabrielle Nunes',
+    autor: 'Reginaldo Rocha',
     tipoAutor: 'aluno',
     titulo: 'Uniforme para doação',
     conteudo: 'Tenho um uniforme da escola para doar quem quiser me procura na entrada!"...',
     data: '01/11/2025 às 17:00',
-    avatarUrl: '/avatar.png',
+    avatarUrl: '/reginaldo.jpg',
     comentarios: [
       {
         id: 101,
-        autor: 'Mariana Souza ',
+        autor: 'Israel Palestino',
         tipoAutor: 'aluno',
         conteudo: 'qual o tamanho ???',
         data: '03/11/2025 às 11:15',
-        avatarUrl: '/avatar.png',
+        avatarUrl: '/israel.png',
       },
       // ...
     ],
   },
   {
     id: 3,
-    autor: 'Daniela  ',
+    autor: 'João Paulo',
     tipoAutor: 'responsavel',
     titulo: 'O Henzo está de atestado',
     conteudo: 'Professora, o Henzo pegou 7 dias de atestado, amanhã levo o atestado na escola.',
     data: '05/11/2025 às 10:45',
-    avatarUrl: '/avatar.png',
+    avatarUrl: '/joao.jpg',
     comentarios: [
       // ...
     ],

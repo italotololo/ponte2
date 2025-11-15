@@ -13,9 +13,9 @@ const DIAS_DA_SEMANA = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 const eventosDoMes: Evento[] = [
   { dia: 5, nome: 'Prazo: Trabalho de História', tipo: 'prazo', cor: 'red' },
   { dia: 7, nome: 'Prova de Matemática', tipo: 'prova', cor: 'indigo' },
-  { dia: 15, nome: 'Reunião de Pais e Mestres', tipo: 'reuniao', cor: 'green' },
-  { dia: 28, nome: 'SARESP', tipo: 'prova', cor: 'indigo' },
-  { dia: 26, nome: 'Início do 3º Bimestre', tipo: 'aviso', cor: 'blue' },
+  { dia: 12, nome: 'Ida ao zoológico', tipo: 'aviso', cor: 'blue' },
+  { dia: 28, nome: 'Reunião de Pais e Mestres', tipo: 'reuniao', cor: 'green' },
+  { dia: 18, nome: 'SARESP', tipo: 'prova', cor: 'indigo' },
   { dia: 31, nome: 'Entrega Final do Portfólio', tipo: 'prazo', cor: 'red' },
 ];
 
@@ -84,7 +84,7 @@ export default function AgendaPage() {
   }
 
   // Simular o dia atual (Apenas para visualização no protótipo)
-  const diaAtual = 11; 
+  const diaAtual = 12; 
   
   return (
     <div className="min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">

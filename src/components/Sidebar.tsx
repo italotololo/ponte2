@@ -7,34 +7,29 @@ import { usePathname } from 'next/navigation';
 
 // Dados simulados do usuário logado (MANTIDOS)
 const currentUser = {
-    nomeCompleto: 'Maria Eduarda Silva', // <-- Vamos usar este nome
-    turma: ' - 5º Ano B ',
+    nomeCompleto: 'Renata Hyuga Kishimoto', // <-- Vamos usar este nome
+    turma: ' - 5º X ',
     escola: 'E.E. Vila Dirce II',
 };
 
 // ... (Restante dos componentes UserIcon, etc.)
 
 // Simple UserIcon component (replace with your own SVG or image if needed)
-function UserIcon() {
-    return (
-        <span
-            style={{
-                display: 'inline-block',
-                width: 40,
-                height: 40,
-                borderRadius: '50%',
-                background: '#eee',
-                textAlign: 'center',
-                lineHeight: '40px',
-                fontSize: 20,
-                color: '#888',
-                marginRight: 12,
-            }}
-            aria-label="User Icon"
-        >
-            👤
-        </span>
-    );
+import React from 'react';
+
+export function UserSection({ name }: { name: string }) {
+  return (
+    <div className={styles.userDetails} aria-label="Usuário">
+      <img
+        src="/renata.jpg"
+        alt="Avatar de Renata"
+        className={styles.avatarImage} // opcional, se você quiser estilizar
+      />
+      <span className={styles['blur-author']} aria-label="Autor censurado" style={{ display: 'inline-block' }}>
+        {name}
+      </span>
+    </div>
+  );
 }
 
 export default function Sidebar() {
@@ -69,19 +64,22 @@ export default function Sidebar() {
             <h2 style={{ textAlign: 'center', marginBottom: '15px', color: '#fff' }}>Menu Principal</h2>
             
             {/* 2. Perfil do Usuário Logado */}
-            <div className={styles.userProfileTop}> {/* Você pode simplificar para styles.userProfile */}
-                <div className={styles.userInfoTop}>    {/* Você pode simplificar para styles.userInfo */}
-                    
-                    <UserIcon /> 
-                    
-                    {/* Informações */}
-                    <div className={styles.userDetailsTop}>
-                        <span className={styles.userNameTop}>{nomeExibido}</span> {/* Agora exibe Maria Eduarda Silva */}
-                        <span className={styles.userRoleTop}>{currentUser.turma}</span>
-                        <span className={styles.userSchoolTop}>{currentUser.escola}</span>
-                    </div>
-                </div>
-            </div>
+           <div className={styles.userProfileTop}>
+  {/* Você pode simplificar para styles.userProfile */}
+  <div className={styles.userInfoTop}>
+    {/* Substituição do icone por avatar */}
+    <img
+      src="/renata2.jpg"
+      alt="Avatar de Renata"
+      className={styles.avatarImage} // opcional, se você quiser estilizar
+    />
+    <div className={styles.userDetailsTop}>
+      <span className={styles.userNameTop}>{nomeExibido}</span> {/* Exibe Maria Eduarda Silva */}
+      <span className={styles.userRoleTop}>{currentUser.turma}</span>
+      <span className={styles.userSchoolTop}>{currentUser.escola}</span>
+    </div>
+  </div>
+</div>
             
             {/* 3. Lista de Itens do Menu */}
             <ul className={styles.menuList}>

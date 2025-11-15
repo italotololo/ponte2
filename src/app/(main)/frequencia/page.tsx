@@ -2,8 +2,8 @@ import React from 'react';
 
 // Dados simulados do aluno (Maria Eduarda Silva) - em um projeto real, viria do contexto
 const aluno = {
-  nome: 'Maria Eduarda Silva',
-  turma: '7º Ano B',
+  nome: 'Renata Hyuga Kishimoto',
+  turma: '5º Ano X',
   periodo: '3º Bimestre / 2025',
 };
 
